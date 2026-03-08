@@ -1,8 +1,13 @@
+/* --- Global Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
 }
 
 body {
@@ -12,12 +17,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation */
+/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
     padding: 2rem 10%;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
 }
 
 .logo {
@@ -46,7 +55,7 @@ nav ul li a:hover {
     color: #888;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 header {
     height: 80vh;
     display: flex;
@@ -69,6 +78,7 @@ header {
     color: #ccc;
 }
 
+/* --- General Buttons --- */
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -76,6 +86,7 @@ header {
     color: #fff;
     text-decoration: none;
     transition: 0.4s;
+    margin-top: 1rem;
 }
 
 .btn:hover {
@@ -83,7 +94,7 @@ header {
     color: #000;
 }
 
-/* Projects Grid */
+/* --- Section Layouts --- */
 section {
     padding: 5rem 10%;
 }
@@ -95,6 +106,7 @@ h2 {
     padding-bottom: 1rem;
 }
 
+/* --- Projects Grid --- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -112,7 +124,7 @@ h2 {
     transform: translateY(-10px);
 }
 
-/* --- Social Grid & Cards --- */
+/* --- Social Media Grid & Cards --- */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,12 +136,13 @@ h2 {
     background: #0a0a0a;
     border: 1px solid #222;
     border-radius: 15px;
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 1.5rem; /* Spacious padding for large icons */
     text-align: center;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .social-card:hover {
@@ -138,20 +151,7 @@ h2 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.card-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.2rem;
-    margin-top: 1rem;
-}
-
-.card-content p {
-    color: #777;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-
-/* --- Uiverse Animated Icons --- */
+/* --- Uiverse Scaled-Up Animated Icons --- */
 .wrapper {
     display: inline-flex;
     list-style: none;
@@ -164,9 +164,13 @@ h2 {
     background: #151515; 
     color: #fff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
+    
+    /* Increased Size */
+    width: 90px;       
+    height: 90px;      
+    font-size: 40px;   
+    margin-bottom: 1.5rem; /* Space between icon and button */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,8 +194,9 @@ h2 {
     font-weight: 600;
 }
 
+/* Adjusted Tooltip Hover Height */
 .wrapper .icon:hover .tooltip {
-    top: -50px;
+    top: -55px; /* Pushes tooltip higher to clear the bigger icon */
     opacity: 1;
     visibility: visible;
 }
@@ -207,32 +212,26 @@ h2 {
     transform: translate(-50%) rotate(45deg);
 }
 
-/* --- Brand Hover Colors --- */
-/* Instagram */
+/* Brand Hover Colors */
 .wrapper .instagram:hover, .wrapper .instagram:hover .tooltip { background: #e4405f; color: #fff; }
 .wrapper .instagram:hover .tooltip::before { background: #e4405f; }
 
-/* TikTok */
 .wrapper .tiktok:hover, .wrapper .tiktok:hover .tooltip { background: #00f2ea; color: #000; }
 .wrapper .tiktok:hover .tooltip::before { background: #00f2ea; }
 
-/* Facebook */
 .wrapper .facebook:hover, .wrapper .facebook:hover .tooltip { background: #1877f2; color: #fff; }
 .wrapper .facebook:hover .tooltip::before { background: #1877f2; }
 
-/* LinkedIn */
 .wrapper .linkedin:hover, .wrapper .linkedin:hover .tooltip { background: #0077b5; color: #fff; }
 .wrapper .linkedin:hover .tooltip::before { background: #0077b5; }
 
-/* Pinterest */
 .wrapper .pinterest:hover, .wrapper .pinterest:hover .tooltip { background: #e60023; color: #fff; }
 .wrapper .pinterest:hover .tooltip::before { background: #e60023; }
 
-/* Line */
 .wrapper .line:hover, .wrapper .line:hover .tooltip { background: #00c300; color: #fff; }
 .wrapper .line:hover .tooltip::before { background: #00c300; }
 
-/* --- Blue Round Follow Button --- */
+/* --- Blue Round Follow Buttons --- */
 .follow-btn {
     display: inline-block;
     padding: 0.6rem 2rem;
@@ -254,14 +253,11 @@ h2 {
     color: #fff;
 }
 
-/* Smooth Scrolling for Navigation */
-html {
-    scroll-behavior: smooth;
-}
-
+/* --- Footer --- */
 footer {
     text-align: center;
     padding: 3rem;
     color: #555;
     font-size: 0.8rem;
+    border-top: 1px solid #111;
 }
