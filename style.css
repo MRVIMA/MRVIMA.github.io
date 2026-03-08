@@ -232,6 +232,7 @@ h2 {
 .wrapper .line:hover .tooltip::before { background: #00c300; }
 
 /* --- Blue Round Follow Buttons --- */
+/* --- Blue Round Follow Buttons --- */
 .follow-btn {
     display: inline-block;
     padding: 0.6rem 2rem;
@@ -244,6 +245,9 @@ h2 {
     text-transform: uppercase;
     transition: all 0.3s ease;
     border: none;
+    
+    /* Adds the gap between the icon and the button */
+    margin-top: 1.5rem; 
 }
 
 .follow-btn:hover {
