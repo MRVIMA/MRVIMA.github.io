@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | VØIDVIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
 
+    <nav>
+        <div class="logo">VØIDVIMA</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Software Engineer & <br><span>Music Producer</span></h1>
+            <p>Building digital experiences and sonic landscapes.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <section id="about" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>Currently pursuing a BSc in Software Engineering with a passion for FiveM scripting and high-energy music production. I bridge the gap between code and creativity.</p>
+    </section>
+
+    <section id="projects">
+        <h2 data-aos="fade-up">Featured Projects</h2>
+        <div class="grid">
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>FiveM Scripts</h3>
+                <p>Advanced cruise control and server-side utilities.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Music Production</h3>
+                <p>Energetic rock and synthwave tracks under Mr Vima.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Web Engineering</h3>
+                <p>Scalable frontend applications built with precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VØIDVIMA. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
