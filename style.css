@@ -153,13 +153,27 @@ h2 {
 .follow-btn {
     display: inline-block;
     padding: 0.8rem 2.5rem;
-    border: 1px solid #fff;
+    
+    /* Branding: Rounded Blue Button */
+    background-color: #007bff; /* Professional Blue */
     color: #fff;
+    border-radius: 50px;       /* Makes it perfectly rounded */
+    border: none;              /* Removes the white outline */
+    
     text-decoration: none;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    font-size: 0.9rem;
+    font-weight: 600;          /* Makes the text "Follow" pop */
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect: Darken the blue slightly */
+.follow-btn:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);    /* Subtle grow effect */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Soft blue glow */
+    color: #fff;               /* Ensures text stays white */
 }
 
 /* Hover Effects */
