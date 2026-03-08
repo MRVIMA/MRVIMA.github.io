@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #888;
+}
+
+/* Hero Section */
+header {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.hero span {
+    color: #888;
+}
+
+.hero p {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Projects Grid */
+section {
+    padding: 5rem 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border: 1px solid #333;
+    padding: 2rem;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #fff;
+    transform: translateY(-10px);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    color: #555;
+    font-size: 0.8rem;
+}
