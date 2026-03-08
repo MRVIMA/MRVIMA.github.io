@@ -13,6 +13,7 @@
     <nav>
         <div class="logo">VØIDVIMA</div>
         <ul>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#social">Socials</a></li>
@@ -20,7 +21,7 @@
         </ul>
     </nav>
 
-    <header>
+    <header id="home">
         <div class="hero" data-aos="fade-up" data-aos-duration="1000">
             <h1>Software Engineer & <br><span>Music Producer</span></h1>
             <p>Building digital experiences and sonic landscapes.</p>
@@ -59,73 +60,75 @@
                 </div>
         </div>
     </div>
+
     <section id="social" data-aos="fade-up">
-    <h2>Connect With Me</h2>
-    
-    <div class="social-grid">
+        <h2>Connect With Me</h2>
         
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon instagram">
-                    <span class="tooltip">Instagram</span>
-                    <i class="fab fa-instagram"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Follow</a>
-        </div>
+        <div class="social-grid">
+            
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <i class="fab fa-instagram"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Follow</a>
+            </div>
 
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon tiktok">
-                    <span class="tooltip">TikTok</span>
-                    <i class="fab fa-tiktok"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Follow</a>
-        </div>
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon tiktok">
+                        <span class="tooltip">TikTok</span>
+                        <i class="fab fa-tiktok"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Follow</a>
+            </div>
 
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon facebook">
-                    <span class="tooltip">Facebook</span>
-                    <i class="fab fa-facebook-f"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Follow</a>
-        </div>
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <i class="fab fa-facebook-f"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Follow</a>
+            </div>
 
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon linkedin">
-                    <span class="tooltip">LinkedIn</span>
-                    <i class="fab fa-linkedin-in"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Connect</a>
-        </div>
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon linkedin">
+                        <span class="tooltip">LinkedIn</span>
+                        <i class="fab fa-linkedin-in"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Connect</a>
+            </div>
 
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon pinterest">
-                    <span class="tooltip">Pinterest</span>
-                    <i class="fab fa-pinterest-p"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Follow</a>
-        </div>
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon pinterest">
+                        <span class="tooltip">Pinterest</span>
+                        <i class="fab fa-pinterest-p"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Follow</a>
+            </div>
 
-        <div class="social-card">
-            <ul class="wrapper">
-                <li class="icon line">
-                    <span class="tooltip">Line</span>
-                    <i class="fab fa-line"></i>
-                </li>
-            </ul>
-            <a href="#" target="_blank" class="follow-btn">Add Friend</a>
-        </div>
+            <div class="social-card">
+                <ul class="wrapper">
+                    <li class="icon line">
+                        <span class="tooltip">Line</span>
+                        <i class="fab fa-line"></i>
+                    </li>
+                </ul>
+                <a href="#" target="_blank" class="follow-btn">Add Friend</a>
+            </div>
 
-    </div>
-</section>
+        </div>
+    </section>
+
     <section id="contact" data-aos="fade-right">
         <h2>Contact</h2>
         <p>Currently open for software projects and music collaborations.</p>
@@ -139,6 +142,69 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        // UPDATE THESE URLS WITH YOUR ACTUAL PROJECT LINKS
+        const projectData = {
+            fivem: {
+                title: "FiveM Scripts",
+                links: [
+                    { name: "View on GitHub", url: "https://github.com/VimukthiMahanamaHewage" },
+                    { name: "Download Server Utilities", url: "#" }
+                ]
+            },
+            music: {
+                title: "Music Production",
+                links: [
+                    { name: "Listen on SoundCloud", url: "https://soundcloud.com/" },
+                    { name: "Spotify Profile", url: "https://spotify.com/" }
+                ]
+            },
+            web: {
+                title: "Web Engineering",
+                links: [
+                    { name: "Portfolio Source Code", url: "https://github.com/VimukthiMahanamaHewage" },
+                    { name: "Other Web Projects", url: "#" }
+                ]
+            }
+        };
+
+        const modal = document.getElementById("project-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalLinks = document.getElementById("modal-links");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // Opens popup and loads the correct buttons based on the card clicked
+        function openModal(category) {
+            const data = projectData[category];
+            modalTitle.innerText = data.title;
+            
+            modalLinks.innerHTML = ""; // Clear existing links
+            
+            data.links.forEach(link => {
+                const btn = document.createElement("a");
+                btn.href = link.url;
+                btn.className = "modal-link-btn";
+                btn.target = "_blank"; // Opens in a new tab
+                btn.innerText = link.name;
+                modalLinks.appendChild(btn);
+            });
+            
+            modal.style.display = "flex";
+        }
+
+        // Close the modal when the "X" is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside the modal box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
