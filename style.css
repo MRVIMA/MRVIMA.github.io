@@ -112,6 +112,47 @@ h2 {
     transform: translateY(-10px);
 }
 
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.social-card {
+    border: 1px solid #333;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s ease;
+    display: block;
+}
+
+.social-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-card p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.social-card:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.social-card:hover p {
+    color: #333;
+}
+
+/* Smooth Scrolling for Navigation */
+html {
+    scroll-behavior: smooth;
+}
+
 footer {
     text-align: center;
     padding: 3rem;
